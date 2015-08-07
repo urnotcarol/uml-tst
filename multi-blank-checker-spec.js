@@ -8,14 +8,26 @@ describe("MultiBlankChecker", function(){
         point: 3}];
         theMultiBlankChecker = new MultiBlankChecker(key);
     });
+
     it("should return correct score", function(){
       var answer = {
         type: "text",
         name: "Q1-2",
-        value: ["封装性", "封装性", "多态性"]
+        value: ["多态性", "封装性", "封装性"]
       };
       var result = theMultiBlankChecker.checkAnswer(answer);
       expect(result).toBe(2);
     });
+
+    it("should return correct score", function(){
+      var answer = {
+        type: "text",
+        name: "Q1-2",
+        value: ["封装性"]
+      };
+      var result = theMultiBlankChecker.checkAnswer(answer);
+      expect(result).toBe(1);
+    });
+
   });
 });
