@@ -22,7 +22,7 @@ function showChoices(str) {
 
   [].forEach.call(question, function(elem) {
     elem.addEventListener("click", function() {
-      document.getElementById(str+"-0").innerHTML = getResult();
+      document.getElementById(str + "-0").innerHTML = getResult();
     });
   });
 }
@@ -32,7 +32,7 @@ showChoices("Q2-2");
 showChoices("Q3-1");
 showChoices("Q3-2");
 
-function calculateTotal(){
+function calculateTotal() {
   var theAnalyser = new FormAnalyser();
   var theCalculator = new Calculator();
   var form = document.getElementsByTagName('form');
