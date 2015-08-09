@@ -3,7 +3,7 @@ describe("BlankChecker", function() {
     var theBlankChecker;
     beforeEach(function() {
       var key = [{
-        name: "Q1-1",
+        name: "Q1-1", 
         value: "统一建模语言",
         point: 1
       }, {

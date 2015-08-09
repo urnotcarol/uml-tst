@@ -13,7 +13,7 @@ describe("ChoiceChecker", function() {
         point: 2
       }];
       theChoiceChecker = new ChoiceChecker(key);
-    });
+    }); 
 
     it("should return correct score of single choice", function() {
       var answer = {

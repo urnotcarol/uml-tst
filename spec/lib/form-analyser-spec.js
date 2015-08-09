@@ -17,7 +17,7 @@ describe("FormAnalyser", function() {
       "<input type='checkbox' name='Q3-1' value='C' />" +
       "<input type='checkbox' name='Q3-1' value='D' />" +
       "<textarea name='Q4-1'>模型的表现形式</textarea>" +
-      "</form>";
+      "</form>"; 
       form = testContainer.getElementsByTagName("form");
     });
 

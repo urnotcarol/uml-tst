@@ -14,7 +14,7 @@ describe("StrategyFactory", function() {
     var theFactory;
     beforeEach(function() {
       theFactory = new StrategyFactory();
-    });
+    }); 
 
     it("should return correct checker type", function() {
       var result = theFactory.getCheckerType("radio");

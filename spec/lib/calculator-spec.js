@@ -6,7 +6,7 @@ describe("Calculator", function() {
     });
 
     it("should return correct total score", function() {
-      var answers = [
+      var answers = [ 
       {type: 'text', name: 'Q1-2', value:["封装性", "继承性"]}, //2
       {type: 'radio', name: 'Q2-1', value:'C'},               //0
       {type: 'checkbox', name: 'Q3-1', value:'ABD'},          //2
