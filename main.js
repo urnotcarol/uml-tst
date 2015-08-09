@@ -6,3 +6,36 @@ document.getElementById("student-number").addEventListener('keydown', function(e
     }
   }
 });
+
+function showChoices(str) {
+  var question = document.getElementsByName(str);
+
+  function getResult() {
+    var result = [];
+    result = [].filter.call(question, function(elem) {
+      return (elem.checked);
+    }).map(function(elem) {
+      return elem.value;
+    });
+    return result.join("");
+  }
+
+  [].forEach.call(question, function(elem) {
+    elem.addEventListener("click", function() {
+      document.getElementById(str+"-0").innerHTML = getResult();
+    });
+  });
+}
+
+showChoices("Q2-1");
+showChoices("Q2-2");
+showChoices("Q3-1");
+showChoices("Q3-2");
+
+function calculateTotal(){
+  var theAnalyser = new FormAnalyser();
+  var theCalculator = new Calculator();
+  var form = document.getElementsByTagName('form');
+  var result = theCalculator.getTotalScore(theAnalyser.getAnswers(form));
+  document.getElementById('score').value = result;
+}
