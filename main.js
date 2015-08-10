@@ -32,10 +32,10 @@ showChoices("Q2-2");
 showChoices("Q3-1");
 showChoices("Q3-2");
 
-function calculateTotal() {
+document.getElementById("submit").addEventListener("click", function() {
   var theAnalyser = new FormAnalyser();
   var theCalculator = new Calculator();
   var form = document.getElementsByTagName('form');
   var result = theCalculator.getTotalScore(theAnalyser.getAnswers(form));
   document.getElementById('score').value = result;
-}
+});
